@@ -1,4 +1,20 @@
-<script setup></script>
+<script setup>
+import { searchProgress, searchQuery, searchResults } from '@/AppState'
+import { ref } from 'vue'
+
+const input = ref()
+const getChamps = async () => {
+  if (!input.value) return
+  //call Riot API to get champs
+  searchProgress.value = true
+  searchResults.value = null
+  searchQuery.value = input.value
+  searchResults.value = await fetchChampByName(input.value)
+}
+
+async function fetchChampByName(name) {}
+</script>
+
 <template>
   <div class="row border-bottom border-primary border-3 justify-content-between">
     <div class="col-2">
@@ -12,4 +28,5 @@
     </div>
   </div>
 </template>
+
 <style></style>
