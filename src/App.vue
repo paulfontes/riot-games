@@ -1,6 +1,5 @@
 <script setup>
 import SearchNav from './components/SearchNav.vue'
-import HomePage from './pages/HomePage.vue'
 </script>
 
 <template>
@@ -10,7 +9,7 @@ import HomePage from './pages/HomePage.vue'
         <SearchNav />
       </div>
       <div class="col-12">
-        <HomePage />
+        <RouterView />
       </div>
     </div>
   </div>

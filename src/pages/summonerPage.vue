@@ -1,5 +1,5 @@
 <script setup></script>
 <template>
-  <h2>Search Your Summoner Name</h2>
+  <h2>Summoner</h2>
 </template>
 <style></style>
